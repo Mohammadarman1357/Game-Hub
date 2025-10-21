@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { use } from 'react';
+import { FaRegCircleUser } from 'react-icons/fa6';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Header = () => {
-    const links = <>
+    const { user, logOut } = use(AuthContext);
 
+    const handlelogOut = () => {
+        logOut()
+            .then(() => {
+                alert("You are successfully Log out!")
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+
+    const links = <>
         <NavLink to={'/'} className='font-semibold'>Home</NavLink>
         <NavLink to={'/auth/login'} className='font-semibold'>Login</NavLink>
         <NavLink to={'/auth/register'} className='font-semibold'>Register</NavLink>
@@ -20,11 +34,22 @@ const Header = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-4 shadow space-y-2">
 
                             {
                                 links
                             }
+
+
+                            {
+                                user ?
+                                    <button onClick={handlelogOut} className='btn btn-primary px-10 '>LogOut</button>
+                                    :
+                                    <Link to={"/auth/login"} className='btn btn-primary px-6'>
+                                        Login
+                                    </Link>
+                            }
+
                         </ul>
                     </div>
 
@@ -44,12 +69,35 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to={"/auth/login"} className='btn btn-primary px-10'>
-                        Login
-                    </Link>
+
+                    <div className='flex gap-5 items-center pr-5'>
+
+                        {
+                            user ?
+                                <div className='flex gap-5 items-center'>
+                                    <button onClick={handlelogOut} className='btn btn-primary px-10 hidden md:flex'>LogOut</button>
+                                    <img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" />
+                                </div>
+                                :
+                                <div className='flex gap-5 items-center'>
+                                    <Link to={"/auth/login"} className='btn btn-primary px-6 hidden md:flex'>
+                                        Login
+                                    </Link>
+                                    <FaRegCircleUser size={30}></FaRegCircleUser>
+                                </div>
+                        }
+
+
+
+                    </div>
+
+
+
+
+
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 export default Header;
