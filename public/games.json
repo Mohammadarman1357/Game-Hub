@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "title": "PUBG: Battlegrounds",
+    "coverPhoto": "https://www.playstation.com/en-us/games/playerunknowns-battlegrounds/",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.pubg.com/",
+    "description": "PUBG: Battlegrounds is a battle royale shooter where players parachute onto an island, scavenge for gear, and fight to be the last one standing.",
+    "ratings": "4.3",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Among Us",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Among_Us",
+    "category": "Social Deduction",
+    "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a social deduction game where crewmates complete tasks while impostors attempt to sabotage and eliminate them.",
+    "ratings": "4.2",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "3",
+    "title": "Celeste",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/File:Celeste_box_art_full.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.celestegame.com/",
+    "description": "Celeste is a precision platformer about climbing a mountain, with challenging levels and a touching story.",
+    "ratings": "4.8",
+    "developer": "Matt Makes Games"
+  },
+  {
+    "id": "4",
+    "title": "Hades",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/File:Hades_logo.png",
+    "category": "Roguelike",
+    "downloadLink": "https://www.supergiantgames.com/games/hades/",
+    "description": "Hades is a roguelike dungeon-crawler where you fight your way out of the underworld using varied weapons and upgrades.",
+    "ratings": "4.9",
+    "developer": "Supergiant Games"
+  },
+  {
+    "id": "5",
+    "title": "Hollow Knight",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Hollow_Knight",
+    "category": "Metroidvania",
+    "downloadLink": "https://hollowknight.com/",
+    "description": "Hollow Knight is a hand-drawn Metroidvania with deep exploration, challenging combat, and a haunting world to uncover.",
+    "ratings": "4.7",
+    "developer": "Team Cherry"
+  },
+  {
+    "id": "6",
+    "title": "Stardew Valley",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Stardew_Valley",
+    "category": "Farming Sim / RPG",
+    "downloadLink": "https://www.stardewvalley.net/",
+    "description": "Stardew Valley is a relaxing farming simulator with farming, crafting, relationships, and dungeon exploration.",
+    "ratings": "4.9",
+    "developer": "ConcernedApe"
+  },
+  {
+    "id": "7",
+    "title": "Cuphead",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Cuphead",
+    "category": "Run & Gun / Boss Rush",
+    "downloadLink": "https://www.cupheadgame.com/",
+    "description": "Cuphead is a run-and-gun action game with 1930s cartoon-inspired art and tough boss battles.",
+    "ratings": "4.6",
+    "developer": "Studio MDHR"
+  },
+  {
+    "id": "8",
+    "title": "Dead Cells",
+    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Dead_Cells",
+    "category": "Roguelike / Metroidvania",
+    "downloadLink": "https://dead-cells.com/",
+    "description": "Dead Cells is a fast-paced roguelike with dynamic combat, procedurally generated levels, and permanent upgrades.",
+    "ratings": "4.5",
+    "developer": "Motion Twin"
+  },
+  {
+    "id": "9",
+    "title": "Ori and the Blind Forest",
+    "coverPhoto": "https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest#/media/File:Ori_and_the_Blind_Forest_cover.png",
+    "category": "Platformer / Adventure",
+    "downloadLink": "https://www.orithegame.com/",
+    "description": "Ori and the Blind Forest is an atmospheric platformer with beautiful visuals and emotional storytelling.",
+    "ratings": "4.8",
+    "developer": "Moon Studios"
+  },
+  {
+    "id": "10",
+    "title": "Hotline Miami",
+    "coverPhoto": "https://en.wikipedia.org/wiki/Hotline_Miami#/media/File:Hotline_Miami_cover.jpg",
+    "category": "Top-down Shooter",
+    "downloadLink": "https://hotline-miami.com/",
+    "description": "Hotline Miami is a fast, violent top-down shooter with a neon retro aesthetic and rhythmic action.",
+    "ratings": "4.4",
+    "developer": "Dennaton Games"
+  },
+  {
+    "id": "11",
+    "title": "Terraria",
+    "coverPhoto": "https://en.wikipedia.org/wiki/Terraria#/media/File:Terraria_cover.jpg",
+    "category": "Sandbox / Adventure",
+    "downloadLink": "https://terraria.org/",
+    "description": "Terraria is a 2D sandbox adventure with crafting, building, exploration and boss fights.",
+    "ratings": "4.6",
+    "developer": "Re-Logic"
+  },
+  {
+    "id": "12",
+    "title": "The Binding of Isaac: Rebirth",
+    "coverPhoto": "https://en.wikipedia.org/wiki/The_Binding_of_Isaac:_Rebirth#/media/File:The_Binding_of_Isaac_rebirth_cover.png",
+    "category": "Roguelike",
+    "downloadLink": "https://bindingofisaac.com/",
+    "description": "The Binding of Isaac is a top-down roguelike with procedurally generated dungeons and strange item synergies.",
+    "ratings": "4.3",
+    "developer": "Edmund McMillen / Nicalis"
+  },
+  {
+    "id": "13",
+    "title": "Limbo",
+    "coverPhoto": "https://en.wikipedia.org/wiki/Limbo_(video_game)#/media/File:Limbo_cover_art.png",
+    "category": "Puzzle Platformer",
+    "downloadLink": "https://playdead.com/games/limbo/",
+    "description": "Limbo is a monochrome puzzle-platformer with eerie atmosphere and clever physics puzzles.",
+    "ratings": "4.2",
+    "developer": "Playdead"
+  },
+  {
+    "id": "14",
+    "title": "Subnautica",
+    "coverPhoto": "https://en.wikipedia.org/wiki/Subnautica#/media/File:Subnautica_cover_art.jpg",
+    "category": "Survival / Exploration",
+    "downloadLink": "https://unknownworlds.com/subnautica/",
+    "description": "Subnautica is an underwater survival/exploration game where you gather resources, craft gear and uncover mysteries.",
+    "ratings": "4.7",
+    "developer": "Unknown Worlds Entertainment"
+  },
+  {
+    "id": "15",
+    "title": "Minecraft",
+    "coverPhoto": "https://www.minecraft.net/en-us",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft is a sandbox building and exploration game with limitless creativity and survival challenges.",
+    "ratings": "4.8",
+    "developer": "Mojang Studios"
+  }
+]
