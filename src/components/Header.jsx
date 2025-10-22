@@ -1,7 +1,6 @@
 import React, { use } from 'react';
-import { FaRegCircleUser } from 'react-icons/fa6';
 import { Link, NavLink } from 'react-router';
-import { AuthContext } from '../provider/AuthProvider';
+import { AuthContext } from '../Context/AuthContext';
 
 const Header = () => {
     const { user, logOut } = use(AuthContext);
@@ -16,14 +15,6 @@ const Header = () => {
             })
     }
 
-
-    const links = <>
-        <NavLink to={'/'} className='font-semibold'>Home</NavLink>
-        <NavLink to={'/auth/login'} className='font-semibold'>Login</NavLink>
-        <NavLink to={'/auth/register'} className='font-semibold'>Register</NavLink>
-
-    </>
-
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm inter-font">
@@ -36,18 +27,20 @@ const Header = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-4 shadow space-y-2">
 
-                            {
-                                links
-                            }
-
+                            <NavLink to={'/'} className='font-semibold'>Home</NavLink>
 
                             {
                                 user ?
                                     <button onClick={handlelogOut} className='btn btn-primary px-10 '>LogOut</button>
                                     :
-                                    <Link to={"/auth/login"} className='btn btn-primary px-6'>
-                                        Login
-                                    </Link>
+                                    <div className='space-y-2 '>
+                                        <Link to={"/auth/login"} className='btn btn-outline px-6 w-full'>
+                                            Login
+                                        </Link>
+                                        <Link to={"/auth/register"} className='btn btn-primary px-6 w-full'>
+                                            Register
+                                        </Link>
+                                    </div>
                             }
 
                         </ul>
@@ -62,10 +55,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex items-center gap-5">
-
-                        {
-                            links
-                        }
+                        <NavLink to={'/'} className='font-semibold'>Home</NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -79,22 +69,20 @@ const Header = () => {
                                     <img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" />
                                 </div>
                                 :
-                                <div className='flex gap-5 items-center'>
+                                <div className='flex gap-2 items-center'>
+                                    
+                                    <Link to={"/auth/register"} className='btn btn-outline px-6 hidden md:flex'>
+                                        Register
+                                    </Link>
+
                                     <Link to={"/auth/login"} className='btn btn-primary px-6 hidden md:flex'>
                                         Login
                                     </Link>
-                                    <FaRegCircleUser size={30}></FaRegCircleUser>
+
                                 </div>
                         }
 
-
-
                     </div>
-
-
-
-
-
                 </div>
             </div >
         </div >

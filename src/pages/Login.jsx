@@ -1,13 +1,13 @@
 import { Link, useLocation, useNavigate } from 'react-router';
-import { AuthContext } from '../provider/AuthProvider';
 import { use, useState } from 'react';
+import { FcGoogle } from 'react-icons/fc';
+import { AuthContext } from '../Context/AuthContext';
 
 const Login = () => {
     const [error, setError] = useState("");
-    const { signIn, setUser } = use(AuthContext);
+    const { signIn, setUser, signInWithGoogle } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -20,6 +20,7 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
+                e.target.reset();
                 navigate(`${location.state ? location.state : '/'}`)
             })
             .catch(error => {
@@ -31,32 +32,59 @@ const Login = () => {
 
     }
 
+    const handleGoogleSignIn = (e) => {
+        e.preventDefault();
+
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                // console.log(user.photoURL)
+                setUser(user);
+                navigate(`${location.state ? location.state : '/' }`);
+            })
+            .catch(error => {
+                console.log(error.Message);
+            })
+    }
+
     return (
         <div className='flex justify-center min-h-screen items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h2 className='font-semibold text-2xl text-center pt-5'>Login your account</h2>
 
-                <form onSubmit={handleLogin} className="card-body">
-                    <fieldset className="fieldset">
-                        {/* email  */}
-                        <label className="label">Email</label>
-                        <input type="email" name='email' className="input" placeholder="Email" required />
+                <div className="card-body">
 
-                        {/* password */}
-                        <label className="label">Password</label>
-                        <input type="password" name='password' className="input" placeholder="Password" required />
+                    <form onSubmit={handleLogin}>
+                        <fieldset className="fieldset">
+                            {/* email  */}
+                            <label className="label">Email</label>
+                            <input type="email" name='email' className="input" placeholder="Email" required />
 
-                        <div><a className="link link-hover">Forgot password?</a></div>
+                            {/* password */}
+                            <label className="label">Password</label>
+                            <input type="password" name='password' className="input" placeholder="Password" required />
 
-                        {error && <p className='text-secondary'>{error}</p>}
+                            <div><a className="link link-hover">Forgot password?</a></div>
 
-                        <button type='submit' className="btn btn-neutral mt-4">Login</button>
+                            {error && <p className='text-secondary'>{error}</p>}
 
-                        <p className='font-semibold text-center pt-5'>Dont't Have An Account ? <Link to={"/auth/register"} className='text-secondary'>Register</Link> </p>
+                            {/* Email login */}
 
+                            <button type='submit' className="btn btn-neutral mt-4">Login</button>
 
-                    </fieldset>
-                </form>
+                            <p className='text-center text-gray-700 mt-2'>__________________________Or__________________________</p>
+                        </fieldset>
+                    </form>
+
+                    {/* Google Login*/}
+                    <button onClick={handleGoogleSignIn} className="btn btn-outline mt-2">
+                        <FcGoogle size={24}></FcGoogle> Login with Google
+                    </button>
+
+                    <p className='font-semibold text-center pt-3'>Dont't Have An Account ? <Link to={"/auth/register"} className='text-secondary'>Register</Link> </p>
+
+                </div>
             </div>
         </div>
     );

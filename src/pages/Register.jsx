@@ -1,6 +1,6 @@
 import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
-import { AuthContext } from '../provider/AuthProvider';
+import { AuthContext } from '../Context/AuthContext';
 
 const Register = () => {
     const { createUser, setUser, updateUser } = use(AuthContext);
@@ -54,35 +54,36 @@ const Register = () => {
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h2 className='font-semibold text-2xl text-center pt-5'>Register your account</h2>
 
-                <form onSubmit={handleRegister} className="card-body">
-                    <fieldset className="fieldset">
+                <div className="card-body">
+                    <form onSubmit={handleRegister}>
+                        <fieldset className="fieldset">
 
-                        {/* name  */}
-                        <label className="label">Name</label>
-                        <input type="text" name='name' className="input" placeholder="Name" />
+                            {/* name  */}
+                            <label className="label">Name</label>
+                            <input type="text" name='name' className="input" placeholder="Name" />
 
-                        {nameError && <p className='text-xs text-secondary'>{nameError}</p>}
+                            {nameError && <p className='text-xs text-secondary'>{nameError}</p>}
 
-                        {/* photo url  */}
-                        <label className="label">Photo URL</label>
-                        <input type="text" name='photourl' className="input" placeholder="Photo URL" />
+                            {/* photo url  */}
+                            <label className="label">Photo URL</label>
+                            <input type="text" name='photourl' className="input" placeholder="Photo URL" />
 
-                        {/* email  */}
-                        <label className="label">Email</label>
-                        <input type="email" name='email' className="input" placeholder="Email" />
+                            {/* email  */}
+                            <label className="label">Email</label>
+                            <input type="email" name='email' className="input" placeholder="Email" />
 
-                        {/* password  */}
-                        <label className="label">Password</label>
-                        <input type="password" name='password' className="input" placeholder="Password" />
+                            {/* password  */}
+                            <label className="label">Password</label>
+                            <input type="password" name='password' className="input" placeholder="Password" />
 
-                        <div><a className="link link-hover">Forgot password?</a></div>
-                        <button type='submit' className="btn btn-neutral mt-4">Register</button>
+                            <div><a className="link link-hover">Forgot password?</a></div>
+                            <button type='submit' className="btn btn-neutral mt-4">Register</button>
 
-                        <p className='font-semibold text-center pt-5'>Already Have An Account ? <Link to={"/auth/login"} className='text-secondary'>Login</Link> </p>
+                            <p className='font-semibold text-center pt-5'>Already Have An Account ? <Link to={"/auth/login"} className='text-secondary'>Login</Link> </p>
 
-
-                    </fieldset>
-                </form>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     );
