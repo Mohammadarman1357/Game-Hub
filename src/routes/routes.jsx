@@ -4,6 +4,11 @@ import AuthLayout from "../layouts/AuthLayout";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import MyProfile from "../components/MyProfile";
+import PopularGames from "../components/PopularGames";
+import Banner from "../components/Banner";
+import Loading from "../pages/Loading";
+import MyProfileInfo from "../pages/MyProfileInfo";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +19,26 @@ const router = createBrowserRouter([
                 path: "",
                 element: <h1>home</h1>
             },
+            {
+                path: '/populargame',
+                element: <PopularGames></PopularGames>
+            },
+            {
+                path: '/banner',
+                loader: () => fetch('/games.json'),
+                element: <Banner></Banner>,
+                hydrateFallbackElement: <Loading></Loading>
+            }
+        ]
+    },
+    {
+        path: "/myprofile",
+        element: <MyProfile></MyProfile>,
+        children:[
+            {
+                path:'/myprofileinfo',
+                element:<MyProfileInfo></MyProfileInfo>
+            }
         ]
     },
     {
