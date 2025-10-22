@@ -15,29 +15,27 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomeLayout></HomeLayout>,
         children: [
-            {
-                path: "",
-                element: <h1>home</h1>
-            },
-            {
-                path: '/populargame',
-                element: <PopularGames></PopularGames>
-            },
+
             {
                 path: '/banner',
                 loader: () => fetch('/games.json'),
                 element: <Banner></Banner>,
                 hydrateFallbackElement: <Loading></Loading>
-            }
+            },
+            {
+                path: '/populargame',
+                element: <PopularGames></PopularGames>,
+                hydrateFallbackElement: <Loading></Loading>
+            },
         ]
     },
     {
         path: "/myprofile",
         element: <MyProfile></MyProfile>,
-        children:[
+        children: [
             {
-                path:'/myprofileinfo',
-                element:<MyProfileInfo></MyProfileInfo>
+                path: '/myprofileinfo',
+                element: <MyProfileInfo></MyProfileInfo>
             }
         ]
     },

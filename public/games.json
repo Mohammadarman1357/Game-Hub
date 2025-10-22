@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "PUBG: Battlegrounds",
-    "coverPhoto": "https://www.playstation.com/en-us/games/playerunknowns-battlegrounds/",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0AkD-CK-AToVMGqgv8flEMXJNzhW0bYkDGqcldZmj5SmKgqgm",
     "category": "Battle Royale",
     "downloadLink": "https://www.pubg.com/",
     "description": "PUBG: Battlegrounds is a battle royale shooter where players parachute onto an island, scavenge for gear, and fight to be the last one standing.",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "title": "Among Us",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Among_Us",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/9/9a/Among_Us_cover_art.jpg",
     "category": "Social Deduction",
     "downloadLink": "https://www.innersloth.com/gameAmongUs.php",
     "description": "Among Us is a social deduction game where crewmates complete tasks while impostors attempt to sabotage and eliminate them.",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "title": "Celeste",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/File:Celeste_box_art_full.png",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Celeste_box_art_full.png",
     "category": "Platformer",
     "downloadLink": "https://www.celestegame.com/",
     "description": "Celeste is a precision platformer about climbing a mountain, with challenging levels and a touching story.",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "title": "Hades",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/File:Hades_logo.png",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/c/cc/Hades_cover_art.jpg",
     "category": "Roguelike",
     "downloadLink": "https://www.supergiantgames.com/games/hades/",
     "description": "Hades is a roguelike dungeon-crawler where you fight your way out of the underworld using varied weapons and upgrades.",
@@ -42,7 +42,7 @@
   {
     "id": "5",
     "title": "Hollow Knight",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Hollow_Knight",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlX0XzMgaLleJG-WgAUDUhTrLav5Mcr9BaSZSvE0DfbAPXEsr5wESN_lnk0o4SF_Tj_kZJ",
     "category": "Metroidvania",
     "downloadLink": "https://hollowknight.com/",
     "description": "Hollow Knight is a hand-drawn Metroidvania with deep exploration, challenging combat, and a haunting world to uncover.",
@@ -52,7 +52,7 @@
   {
     "id": "6",
     "title": "Stardew Valley",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Stardew_Valley",
+    "coverPhoto": "https://th.bing.com/th/id/R.2c4bf1b641c57e84b40df079ec16984c?rik=SNf3Hc1w2Nti4g&pid=ImgRaw&r=0",
     "category": "Farming Sim / RPG",
     "downloadLink": "https://www.stardewvalley.net/",
     "description": "Stardew Valley is a relaxing farming simulator with farming, crafting, relationships, and dungeon exploration.",
@@ -62,7 +62,7 @@
   {
     "id": "7",
     "title": "Cuphead",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Cuphead",
+    "coverPhoto": "https://i5.walmartimages.com/seo/Cuphead-Limited-Edition-Nintendo-Switch_01fae0bd-d1f3-4c1c-a27e-b9a235c39238.727cbabf0a6133796c6d19bcf4def777.png",
     "category": "Run & Gun / Boss Rush",
     "downloadLink": "https://www.cupheadgame.com/",
     "description": "Cuphead is a run-and-gun action game with 1930s cartoon-inspired art and tough boss battles.",
@@ -72,7 +72,7 @@
   {
     "id": "8",
     "title": "Dead Cells",
-    "coverPhoto": "https://commons.wikimedia.org/wiki/Category:Dead_Cells",
+    "coverPhoto": "https://th.bing.com/th/id/OIP.Uky160coZdkvpPr_CyrqqAHaKw?w=115&h=180&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3",
     "category": "Roguelike / Metroidvania",
     "downloadLink": "https://dead-cells.com/",
     "description": "Dead Cells is a fast-paced roguelike with dynamic combat, procedurally generated levels, and permanent upgrades.",
@@ -82,7 +82,7 @@
   {
     "id": "9",
     "title": "Ori and the Blind Forest",
-    "coverPhoto": "https://en.wikipedia.org/wiki/Ori_and_the_Blind_Forest#/media/File:Ori_and_the_Blind_Forest_cover.png",
+    "coverPhoto": "https://tse1.mm.bing.net/th/id/OIP.5YY1SEPqhuEMQjZ7qnqWUwHaKG?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
     "category": "Platformer / Adventure",
     "downloadLink": "https://www.orithegame.com/",
     "description": "Ori and the Blind Forest is an atmospheric platformer with beautiful visuals and emotional storytelling.",
@@ -92,7 +92,7 @@
   {
     "id": "10",
     "title": "Hotline Miami",
-    "coverPhoto": "https://en.wikipedia.org/wiki/Hotline_Miami#/media/File:Hotline_Miami_cover.jpg",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEAouneBq7l838RpBiLXY8SpvBaRBJGJIrFg&s",
     "category": "Top-down Shooter",
     "downloadLink": "https://hotline-miami.com/",
     "description": "Hotline Miami is a fast, violent top-down shooter with a neon retro aesthetic and rhythmic action.",
@@ -102,7 +102,7 @@
   {
     "id": "11",
     "title": "Terraria",
-    "coverPhoto": "https://en.wikipedia.org/wiki/Terraria#/media/File:Terraria_cover.jpg",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQBXTn5o9BlYQe4qZFrBTcgZUj7orbdtuUVg&s",
     "category": "Sandbox / Adventure",
     "downloadLink": "https://terraria.org/",
     "description": "Terraria is a 2D sandbox adventure with crafting, building, exploration and boss fights.",
@@ -112,7 +112,7 @@
   {
     "id": "12",
     "title": "The Binding of Isaac: Rebirth",
-    "coverPhoto": "https://en.wikipedia.org/wiki/The_Binding_of_Isaac:_Rebirth#/media/File:The_Binding_of_Isaac_rebirth_cover.png",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSVwshZ-Gy5uWVlR5YIFHF93Dp4uwHEf2-rw&s",
     "category": "Roguelike",
     "downloadLink": "https://bindingofisaac.com/",
     "description": "The Binding of Isaac is a top-down roguelike with procedurally generated dungeons and strange item synergies.",
@@ -122,7 +122,7 @@
   {
     "id": "13",
     "title": "Limbo",
-    "coverPhoto": "https://en.wikipedia.org/wiki/Limbo_(video_game)#/media/File:Limbo_cover_art.png",
+    "coverPhoto": "https://www.gamespot.com/a/uploads/scale_medium/1197/11970954/2426704-2224461-box_limbo.png",
     "category": "Puzzle Platformer",
     "downloadLink": "https://playdead.com/games/limbo/",
     "description": "Limbo is a monochrome puzzle-platformer with eerie atmosphere and clever physics puzzles.",
@@ -132,7 +132,7 @@
   {
     "id": "14",
     "title": "Subnautica",
-    "coverPhoto": "https://en.wikipedia.org/wiki/Subnautica#/media/File:Subnautica_cover_art.jpg",
+    "coverPhoto": "https://th.bing.com/th/id/OIP.0Vd-wjGi2118h6kn_b6_bQHaLH?o=7&cb=12rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
     "category": "Survival / Exploration",
     "downloadLink": "https://unknownworlds.com/subnautica/",
     "description": "Subnautica is an underwater survival/exploration game where you gather resources, craft gear and uncover mysteries.",
@@ -142,7 +142,7 @@
   {
     "id": "15",
     "title": "Minecraft",
-    "coverPhoto": "https://www.minecraft.net/en-us",
+    "coverPhoto": "https://th.bing.com/th/id/R.3019bb5189bda92f21249f6e26d192a6?rik=E2ldSDrctzNu8Q&pid=ImgRaw&r=0",
     "category": "Sandbox",
     "downloadLink": "https://www.minecraft.net/",
     "description": "Minecraft is a sandbox building and exploration game with limitless creativity and survival challenges.",

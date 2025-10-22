@@ -3,17 +3,7 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 
 const Header = () => {
-    const { user, logOut } = use(AuthContext);
-
-    const handlelogOut = () => {
-        logOut()
-            .then(() => {
-                alert("You are successfully Log out!")
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+    const { user } = use(AuthContext);
 
     return (
         <div>
@@ -27,17 +17,19 @@ const Header = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-4 shadow space-y-2">
 
-                            <NavLink to={'/'} className='font-semibold btn'>Home</NavLink>
 
                             {
                                 user ?
-                                    <NavLink onClick={handlelogOut} className='btn btn-outline px-6 w-full'>LogOut</NavLink>
+                                    <div className='flex gap-5 items-center'>
+                                        <Link to={'/myprofile'}><img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" /></Link>
+                                        <h1>{user?.displayName}</h1>
+                                    </div>
                                     :
                                     <div className='space-y-2 '>
-                                        <Link to={"/auth/login"} className='btn btn-outline px-6 w-full'>
+                                        <Link to={"/auth/login"} className='btn btn-outline hover:text-black px-6 w-full'>
                                             Login
                                         </Link>
-                                        <Link to={"/auth/register"} className='btn btn-primary px-6 w-full'>
+                                        <Link to={"/auth/register"} className='btn btn-secondary px-6 w-full'>
                                             Register
                                         </Link>
                                     </div>
@@ -48,14 +40,14 @@ const Header = () => {
 
                     <Link to={'/'}>
                         <span className="text-[28px] text-[#131313] font-bold flex items-center">
-                            <span className='ml-2 text-[#632ee3] '>GameHub</span>
+                            <span className='ml-2 text-white '>Game<span className='text-secondary'>Hub</span></span>
                         </span>
                     </Link>
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex items-center gap-5">
-                        <NavLink to={'/'} className='font-semibold'>Home</NavLink>
+
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -65,17 +57,17 @@ const Header = () => {
                         {
                             user ?
                                 <div className='flex gap-5 items-center'>
-                                    <button onClick={handlelogOut} className='btn btn-primary px-10 hidden md:flex'>LogOut</button>
+
                                     <Link to={'/myprofile'}><img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" /></Link>
                                 </div>
                                 :
                                 <div className='flex gap-2 items-center'>
 
-                                    <Link to={"/auth/register"} className='btn btn-outline px-6 hidden md:flex'>
+                                    <Link to={"/auth/register"} className='btn btn-outline hover:text-black px-6 hidden md:flex'>
                                         Register
                                     </Link>
 
-                                    <Link to={"/auth/login"} className='btn btn-primary px-6 hidden md:flex'>
+                                    <Link to={"/auth/login"} className='btn btn-secondary px-6 hidden md:flex'>
                                         Login
                                     </Link>
 

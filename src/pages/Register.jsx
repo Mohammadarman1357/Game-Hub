@@ -60,23 +60,22 @@ const Register = () => {
 
                             {/* name  */}
                             <label className="label">Name</label>
-                            <input type="text" name='name' className="input" placeholder="Name" />
+                            <input type="text" name='name' className="input" placeholder="Name" required/>
 
                             {nameError && <p className='text-xs text-secondary'>{nameError}</p>}
 
                             {/* photo url  */}
                             <label className="label">Photo URL</label>
-                            <input type="text" name='photourl' className="input" placeholder="Photo URL" />
+                            <input type="text" name='photourl' className="input" placeholder="Photo URL" required/>
 
                             {/* email  */}
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input" placeholder="Email" />
+                            <input type="email" name='email' className="input" placeholder="Email" required/>
 
                             {/* password  */}
                             <label className="label">Password</label>
-                            <input type="password" name='password' className="input" placeholder="Password" />
+                            <input type="password" name='password' className="input" placeholder="Password" required/>
 
-                            <div><a className="link link-hover">Forgot password?</a></div>
                             <button type='submit' className="btn btn-neutral mt-4">Register</button>
 
                             <p className='font-semibold text-center pt-5'>Already Have An Account ? <Link to={"/auth/login"} className='text-secondary'>Login</Link> </p>

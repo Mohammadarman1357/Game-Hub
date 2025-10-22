@@ -1,13 +1,15 @@
 import { Link, useLocation, useNavigate } from 'react-router';
-import { use, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../Context/AuthContext';
 
 const Login = () => {
     const [error, setError] = useState("");
-    const { signIn, setUser, signInWithGoogle } = use(AuthContext);
+    const { signIn, setUser, signInWithGoogle, forgetPassword } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+
+    const emailRef = useRef();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -41,11 +43,24 @@ const Login = () => {
                 console.log(user)
                 // console.log(user.photoURL)
                 setUser(user);
-                navigate(`${location.state ? location.state : '/' }`);
+                navigate(`${location.state ? location.state : '/'}`);
             })
             .catch(error => {
                 console.log(error.Message);
             })
+    }
+
+    const handleForgetPassword = () => {
+        const email = emailRef.current.value;
+        console.log(email)
+
+        forgetPassword(email)
+            .then(() => {
+                alert('Please Check your email')
+            })
+            .catch(error =>
+                console.log(error)
+            )
     }
 
     return (
@@ -59,13 +74,13 @@ const Login = () => {
                         <fieldset className="fieldset">
                             {/* email  */}
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input" placeholder="Email" required />
+                            <input type="email" ref={emailRef} name='email' className="input" placeholder="Email" required />
 
                             {/* password */}
                             <label className="label">Password</label>
                             <input type="password" name='password' className="input" placeholder="Password" required />
 
-                            <div><a className="link link-hover">Forgot password?</a></div>
+                            <div onClick={handleForgetPassword}><a className="link link-hover">Forgot password?</a></div>
 
                             {error && <p className='text-secondary'>{error}</p>}
 
@@ -73,12 +88,12 @@ const Login = () => {
 
                             <button type='submit' className="btn btn-neutral mt-4">Login</button>
 
-                            <p className='text-center text-gray-700 mt-2'>__________________________Or__________________________</p>
+                            <p className='text-center mt-2'>__________________________Or__________________________</p>
                         </fieldset>
                     </form>
 
                     {/* Google Login*/}
-                    <button onClick={handleGoogleSignIn} className="btn btn-outline mt-2">
+                    <button onClick={handleGoogleSignIn} className="btn btn-outline hover:text-secondary mt-2">
                         <FcGoogle size={24}></FcGoogle> Login with Google
                     </button>
 
