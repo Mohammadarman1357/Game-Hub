@@ -124,14 +124,13 @@ Additional Route: optional, based on website theme.
 ------------ 
 * NPM Packages used : 
 
-    "@tailwindcss/vite": "^4.1.15",
-    "firebase": "^12.4.0",
-    "gsap": "^3.13.0",
-    "motion": "^12.23.24",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-icons": "^5.5.0",
-    "react-router": "^7.9.4",
-    "react-toastify": "^11.0.5",
-    "tailwindcss": "^4.1.15"
+    - @tailwindcss/vite
+    - firebase
+    - gsap
+    - motion
+    - react
+    - react-dom
+    - react-icons
+    - react-router
+    - tailwindcss
 
