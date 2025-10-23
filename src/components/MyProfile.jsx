@@ -7,6 +7,7 @@ const MyProfile = () => {
 
     return (
         <div className='bg-gradient-to-bl from-[#050505] to-[#2f0076] min-w-screen min-h-screen'>
+            <title>My Profile</title>
             <div className='mx-auto my-3 '>
 
                 <header>

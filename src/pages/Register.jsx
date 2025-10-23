@@ -4,7 +4,7 @@ import { AuthContext } from '../Context/AuthContext';
 
 const Register = () => {
     const { createUser, setUser, updateUser } = use(AuthContext);
-    const [nameError, setNameError] = useState('');
+    const [error, setError] = useState("");
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -12,16 +12,25 @@ const Register = () => {
 
         const form = e.target;
         const name = form.name.value;
-
-        if (name.length < 5) {
-            setNameError("Name should be more than 5 character");
-        } else {
-            setNameError("");
-        }
-
         const photo = form.photourl.value;
         const email = form.email.value;
         const password = form.password.value;
+
+
+        const length6Pattern = /^.{6,}$/;
+        const casePattern = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+
+        if (!length6Pattern.test(password)) {
+            // console.log('password did not match');
+            setError('Password must be 6 character or longer');
+            return;
+        }
+        else if (!casePattern.test(password)) {
+            setError('Password must have at least one uppercase and one lower case character')
+            return;
+        }
+
+        setError('');
 
         // console.log(name, photo);
 
@@ -51,6 +60,7 @@ const Register = () => {
 
     return (
         <div className='flex justify-center min-h-screen items-center'>
+            <title>Register</title>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <h2 className='font-semibold text-2xl text-center pt-5'>Register your account</h2>
 
@@ -60,22 +70,24 @@ const Register = () => {
 
                             {/* name  */}
                             <label className="label">Name</label>
-                            <input type="text" name='name' className="input" placeholder="Name" required/>
+                            <input type="text" name='name' className="input" placeholder="Name" required />
 
-                            {nameError && <p className='text-xs text-secondary'>{nameError}</p>}
 
                             {/* photo url  */}
                             <label className="label">Photo URL</label>
-                            <input type="text" name='photourl' className="input" placeholder="Photo URL" required/>
+                            <input type="text" name='photourl' className="input" placeholder="Photo URL" required />
 
                             {/* email  */}
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input" placeholder="Email" required/>
+                            <input type="email" name='email' className="input" placeholder="Email" required />
 
                             {/* password  */}
                             <label className="label">Password</label>
-                            <input type="password" name='password' className="input" placeholder="Password" required/>
+                            <input type="password" name='password' className="input" placeholder="Password" required />
 
+                            {
+                                error && <p className='text-secondary'>{error}</p>
+                            }
                             <button type='submit' className="btn btn-neutral mt-4">Register</button>
 
                             <p className='font-semibold text-center pt-5'>Already Have An Account ? <Link to={"/auth/login"} className='text-secondary'>Login</Link> </p>

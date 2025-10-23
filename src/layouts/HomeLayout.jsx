@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import PopularGames from '../components/PopularGames';
 import Footer from '../components/Footer';
+import NewsLetter from '../pages/NewsLetter';
 
 const HomeLayout = () => {
     return (
@@ -17,6 +18,7 @@ const HomeLayout = () => {
 
                 <Banner></Banner>
                 <PopularGames></PopularGames>
+                <NewsLetter></NewsLetter>
             </main>
 
             <footer>

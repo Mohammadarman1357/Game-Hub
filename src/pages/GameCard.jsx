@@ -2,7 +2,10 @@ import React from 'react';
 import GameRatings from './GameRatings';
 
 const GameCard = ({ game, onClick }) => {
+
+
     return (
+
         <div className="card w-64 md:w-72 bg-base-300 shadow-xl overflow-hidden flex-shrink-0 snap-center rounded-xl transition-transform hover:shadow-2xl hover:scale-[1.02] cursor-pointer"
             onClick={() => onClick(game)}>
 

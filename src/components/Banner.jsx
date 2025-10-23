@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { IoArrowBackCircleOutline, IoArrowBackCircleSharp, IoArrowForwardCircleSharp } from "react-icons/io5";
+import { NavLink } from "react-router";
+import BannerCard from "../pages/BannerCard";
 
 const Banner = () => {
     const [games, setGames] = useState([]);
@@ -67,23 +69,7 @@ const Banner = () => {
         <div className="relative w-full h-[500px] overflow-hidden rounded-2xl">
             <div ref={sliderRef} className="relative w-full h-full">
                 {games.map((game) => (
-
-                    <div
-                        key={game.id}
-                        className="slide absolute top-0 left-0 w-full h-full flex items-center justify-center"
-                    >
-
-                        <div className={`relative w-[320px] md:w-[80%] h-[420px] rounded-2xl overflow-hidden shadow-xl group transition-all duration-300 hover:scale-105 border-4 border-transparent hover:border-yellow-400`}>
-                            <div className="flex gap-4">
-                                <img className="w-[50%] h-full" src={`${game.coverPhoto}`} alt="" />
-                                <div className="absolute inset-0 bg-black/40 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <h2 className="text-xl font-bold text-white mb-6">
-                                        {game.title}
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <BannerCard key={game.id} game={game}></BannerCard>
                 ))}
             </div>
 

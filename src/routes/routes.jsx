@@ -5,10 +5,11 @@ import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MyProfile from "../components/MyProfile";
-import PopularGames from "../components/PopularGames";
 import Banner from "../components/Banner";
 import Loading from "../pages/Loading";
 import MyProfileInfo from "../pages/MyProfileInfo";
+import GameDetails from "../pages/GameDetails";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -18,15 +19,8 @@ const router = createBrowserRouter([
 
             {
                 path: '/banner',
-                loader: () => fetch('/games.json'),
                 element: <Banner></Banner>,
-                hydrateFallbackElement: <Loading></Loading>
-            },
-            {
-                path: '/populargame',
-                element: <PopularGames></PopularGames>,
-                hydrateFallbackElement: <Loading></Loading>
-            },
+            }
         ]
     },
     {
@@ -53,12 +47,12 @@ const router = createBrowserRouter([
             },
         ]
     },
-    // {
-    //     path: '/news-details/:id',
-    //     element: <PrivateRoute><NewsDetails></NewsDetails></PrivateRoute>,
-    //     loader: () => fetch('/news.json'),
-    //     hydrateFallbackElement: <Loading></Loading>
-    // },
+    {
+        path: '/gamedetails/:id',
+        element: <PrivateRoute><GameDetails></GameDetails></PrivateRoute>,
+        loader: () => fetch('/games.json'),
+        hydrateFallbackElement: <Loading></Loading>
+    },
     {
         path: '/*',
         element: <ErrorPage></ErrorPage>

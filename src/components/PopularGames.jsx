@@ -1,6 +1,7 @@
 import React, { use, useState } from 'react';
 import GameDetails from '../pages/GameDetails';
 import GameSlide from '../pages/GameSlide';
+import { useNavigate } from 'react-router';
 
 const gamePromise = fetch('/games.json')
     .then((res) => res.json());
@@ -8,13 +9,11 @@ const gamePromise = fetch('/games.json')
 const PopularGames = () => {
     const gameData = use(gamePromise);
     const [selectedGame, setSelectedGame] = useState(null);
+    const navigate = useNavigate();
 
     const handleCardClick = (game) => {
         setSelectedGame(game);
-    };
-
-    const handleBack = () => {
-        setSelectedGame(null);
+        navigate(`/gamedetails/${game.id}`);
     };
 
     return (
@@ -25,7 +24,7 @@ const PopularGames = () => {
 
                 {
                     selectedGame ? (
-                        <GameDetails game={selectedGame} onBack={handleBack}></GameDetails>
+                        <GameDetails ></GameDetails>
                     ) : (
                         <GameSlide gameData={gameData} onCardClick={handleCardClick} />
                     )
