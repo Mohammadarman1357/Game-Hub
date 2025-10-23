@@ -4,6 +4,7 @@ import Banner from '../components/Banner';
 import PopularGames from '../components/PopularGames';
 import Footer from '../components/Footer';
 import NewsLetter from '../pages/NewsLetter';
+import { ToastContainer } from 'react-toastify';
 
 const HomeLayout = () => {
     return (
@@ -14,7 +15,7 @@ const HomeLayout = () => {
                 </nav>
             </header>
 
-            <main className='w-11/12 mx-auto my-3'>
+            <main className='w-11/12 mx-auto my-3 space-y-5'>
 
                 <Banner></Banner>
                 <PopularGames></PopularGames>
@@ -24,6 +25,7 @@ const HomeLayout = () => {
             <footer>
                 <Footer></Footer>
             </footer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

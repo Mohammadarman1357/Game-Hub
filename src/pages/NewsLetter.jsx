@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewsLetter = () => {
     return (
-        <div className='w-11/12 mx-auto my-3'>
+        <div className='w-11/12 mx-auto my-5'>
             <div className='p-2 md:p-20 bg-gradient-to-tr from-[#007111] to-[#01ef0514] rounded-[8px]'>
                 <h1 className='text-3xl font-bold text-white'>Subscribe to our Newsletter</h1>
                 <p className='mt-5'>

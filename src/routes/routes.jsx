@@ -10,6 +10,7 @@ import Loading from "../pages/Loading";
 import MyProfileInfo from "../pages/MyProfileInfo";
 import GameDetails from "../pages/GameDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
             {
                 path: '/myprofileinfo',
                 element: <MyProfileInfo></MyProfileInfo>
-            }
+            },
         ]
     },
     {
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
         path: '/gamedetails/:id',
         element: <PrivateRoute><GameDetails></GameDetails></PrivateRoute>,
         loader: () => fetch('/games.json'),
+        hydrateFallbackElement: <Loading></Loading>
+    },
+    {
+        path: '/updateprofile',
+        element: <UpdateProfile></UpdateProfile>,
         hydrateFallbackElement: <Loading></Loading>
     },
     {

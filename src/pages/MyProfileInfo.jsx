@@ -1,6 +1,6 @@
 import React, { use } from 'react';
 import { AuthContext } from '../Context/AuthContext';
-import { useLocation, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 
 const MyProfileInfo = () => {
     const { user, logOut } = use(AuthContext);
@@ -24,7 +24,11 @@ const MyProfileInfo = () => {
             <h1 className='font-bold my-2 text-2xl md:text-4xl'>{user?.displayName}</h1>
             <h1 className='text-xs md:text-[16px]'>{user?.email}</h1>
 
-            <button onClick={handlelogOut} className='btn bg-blue-900 px-10 mt-4'>LogOut</button>
+            <div className='flex gap-5 mt-5'>
+                <button onClick={handlelogOut} className='btn bg-blue-900 px-10'>LogOut</button>
+                <Link to={'/updateprofile'} className='btn bg-blue-900 px-10'>Update Profile</Link>
+            </div>
+
         </div>
     );
 };
