@@ -1,23 +1,38 @@
-import React, { use } from 'react';
-import PopularGame from '../pages/PopularGame';
+import React, { use, useState } from 'react';
+import GameDetails from '../pages/GameDetails';
+import GameSlide from '../pages/GameSlide';
 
 const gamePromise = fetch('/games.json')
     .then((res) => res.json());
 
 const PopularGames = () => {
     const gameData = use(gamePromise);
+    const [selectedGame, setSelectedGame] = useState(null);
+
+    const handleCardClick = (game) => {
+        setSelectedGame(game);
+    };
+
+    const handleBack = () => {
+        setSelectedGame(null);
+    };
 
     return (
-        <div className='w-11/12 mx-auto my-3'>
-            <h1 className='font-bold text-4xl'>Popular Games</h1>
+        <div className='min-h-screen text-white p-1 md:p-4 mx-auto my-1 md:my-3'>
+            <h1 className='font-bold text-4xl mb-5'>Popular Games</h1>
 
-            <div className='grid grid-cols-3 gap-5 mt-5'>
+            <div className="max-w-7xl mx-auto">
+
                 {
-                    gameData.map(game => <PopularGame game={game}></PopularGame>)
+                    selectedGame ? (
+                        <GameDetails game={selectedGame} onBack={handleBack}></GameDetails>
+                    ) : (
+                        <GameSlide gameData={gameData} onCardClick={handleCardClick} />
+                    )
                 }
-            </div>
 
-        </div>
+            </div>
+        </div >
     );
 };
 

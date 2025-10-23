@@ -2,10 +2,11 @@ import React from 'react';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import PopularGames from '../components/PopularGames';
+import Footer from '../components/Footer';
 
 const HomeLayout = () => {
     return (
-        <div className='bg-gradient-to-bl from-[#050505] to-[#2f0076]'>
+        <div className='w-11/12 mx-auto bg-gradient-to-bl from-[#050505] to-[#2f0076]'>
             <header>
                 <nav className='mx-auto my-3'>
                     <Header></Header>
@@ -17,6 +18,10 @@ const HomeLayout = () => {
                 <Banner></Banner>
                 <PopularGames></PopularGames>
             </main>
+
+            <footer>
+                <Footer></Footer>
+            </footer>
         </div>
     );
 };

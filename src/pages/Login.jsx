@@ -40,7 +40,7 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                // console.log(user)
                 // console.log(user.photoURL)
                 setUser(user);
                 navigate(`${location.state ? location.state : '/'}`);
@@ -52,7 +52,7 @@ const Login = () => {
 
     const handleForgetPassword = () => {
         const email = emailRef.current.value;
-        console.log(email)
+        // console.log(email)
 
         forgetPassword(email)
             .then(() => {

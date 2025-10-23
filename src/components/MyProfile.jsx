@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import MyProfileInfo from '../pages/MyProfileInfo';
+import Footer from './Footer';
 
 const MyProfile = () => {
 
@@ -17,6 +18,10 @@ const MyProfile = () => {
                     <MyProfileInfo></MyProfileInfo>
 
                 </main>
+
+                <footer>
+                    <Footer></Footer>
+                </footer>
             </div>
         </div>
 

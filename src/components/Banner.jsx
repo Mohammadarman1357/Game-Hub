@@ -9,7 +9,7 @@ const Banner = () => {
 
 
     useEffect(() => {
-        fetch("/public/games.json")
+        fetch("/games.json")
             .then((res) => res.json())
             .then((data) => setGames(data))
             .catch((err) => console.error("Error loading games.json:", err));
@@ -73,12 +73,14 @@ const Banner = () => {
                         className="slide absolute top-0 left-0 w-full h-full flex items-center justify-center"
                     >
 
-                        <div className={`relative w-[320px] h-[420px] rounded-2xl overflow-hidden shadow-xl group transition-all duration-300 hover:scale-105 border-4 border-transparent hover:border-yellow-400`}>
-                            <img className="w-full h-full" src={`${game.coverPhoto}`} alt="" />
-                            <div className="absolute inset-0 bg-black/40 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <h2 className="text-xl font-bold text-white mb-6">
-                                    {game.title}
-                                </h2>
+                        <div className={`relative w-[320px] md:w-[80%] h-[420px] rounded-2xl overflow-hidden shadow-xl group transition-all duration-300 hover:scale-105 border-4 border-transparent hover:border-yellow-400`}>
+                            <div className="flex gap-4">
+                                <img className="w-[50%] h-full" src={`${game.coverPhoto}`} alt="" />
+                                <div className="absolute inset-0 bg-black/40 flex items-end justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <h2 className="text-xl font-bold text-white mb-6">
+                                        {game.title}
+                                    </h2>
+                                </div>
                             </div>
                         </div>
                     </div>

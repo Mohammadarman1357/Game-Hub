@@ -1,9 +1,23 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 
 const Header = () => {
-    const { user } = use(AuthContext);
+    const { user, logOut } = use(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handlelogOut = () => {
+        logOut()
+            .then(() => {
+                alert("You are successfully Log out!");
+                navigate(`${location.state ? location.state : '/'}`)
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 
     return (
         <div>
@@ -20,9 +34,12 @@ const Header = () => {
 
                             {
                                 user ?
-                                    <div className='flex gap-5 items-center'>
-                                        <Link to={'/myprofile'}><img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" /></Link>
-                                        <h1>{user?.displayName}</h1>
+                                    <div className='flex flex-col gap-2 items-center'>
+                                        <div className='flex gap-5 items-center'>
+                                            <Link to={'/myprofile'}><img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" /></Link>
+                                            <h1>{user?.displayName}</h1>
+                                        </div>
+                                        <button onClick={handlelogOut} className='btn btn-secondary px-10 mt-2 w-full'>LogOut</button>
                                     </div>
                                     :
                                     <div className='space-y-2 '>
@@ -57,8 +74,8 @@ const Header = () => {
                         {
                             user ?
                                 <div className='flex gap-5 items-center'>
-
-                                    <Link to={'/myprofile'}><img className='w-10 rounded-full' src={`${user?.photoURL}`} alt="" /></Link>
+                                    <button onClick={handlelogOut} className='btn btn-secondary px-5 hidden md:flex'>LogOut</button>
+                                    <Link to={'/myprofile'}><img className='w-12 rounded-full' src={`${user?.photoURL}`} alt="" /></Link>
                                 </div>
                                 :
                                 <div className='flex gap-2 items-center'>
